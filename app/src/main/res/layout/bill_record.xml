@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingTop="12dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="10dp"
+    tools:background="@color/ivory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/br_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/br_header_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="2周">
+
+        </TextView>
+        <TextView
+            android:id="@+id/br_header_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/br_header_week"
+            android:textSize="8sp"
+            android:textColor="@color/grey"
+            android:text="7.6-7.12">
+
+        </TextView>
+        <TextView
+            android:id="@+id/br_header_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+        </TextView>
+        <TextView
+            android:id="@+id/br_header_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible">
+
+        </TextView>
+        <ImageView
+            android:id="@+id/br_header_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:visibility="invisible">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/br_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50px">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/br_body_slot1">
+            <TextView
+                android:id="@+id/br_body_slot1_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:text="-18.00">
+            </TextView>
+
+            <TextView
+                android:id="@+id/br_body_slot1_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:text="结余"
+                android:textColor="@color/grey"
+                android:textSize="8sp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/br_body_slot2"
+            android:layout_below="@id/br_body_slot1">
+
+
+            <TextView
+                android:id="@+id/br_body_slot2_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@color/red"
+                android:text="收入0.00">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:layout_marginRight="10px"
+                android:textSize="8sp"
+                android:textColor="@color/grey"
+                android:text="|">
+            </TextView>
+
+            <TextView
+                android:id="@+id/br_body_slot2_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="@color/green"
+                android:text="支出0.00">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

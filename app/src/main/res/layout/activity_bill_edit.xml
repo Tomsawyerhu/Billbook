@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/be_linear">
+
+    <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/be_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_marginTop="30dp"
+        android:id="@+id/be_content"
+        android:layout_width="match_parent"
+        android:layout_height="800px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/be_cal_wrapper">
+        <com.example.billbook.widget.view.Calculator
+            android:id="@+id/be_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+        </com.example.billbook.widget.view.Calculator>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

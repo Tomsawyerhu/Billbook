@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/season_term"
+        android:layout_width="match_parent"
+        android:layout_height="500px"
+        android:paddingLeft="60px"
+        android:paddingBottom="60px">
+
+
+        <TextView
+            android:id="@+id/outcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7月-支出"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:layout_centerVertical="true">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/outcome_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30dp"
+            android:layout_below="@id/outcome">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收入: "
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/outcome_value">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/income_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:layout_toRightOf="@id/income"
+            android:layout_below="@id/outcome_value">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="预算"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12dp"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@id/income_value"
+            android:layout_below="@id/outcome_value">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="60px"
+        android:paddingRight="60px"
+        android:paddingTop="80px">
+
+        <RelativeLayout
+            android:id="@+id/today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/today_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/today_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/today_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/today_mention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近一笔"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_below="@id/today_title"
+                android:layout_toRightOf="@id/today_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/today_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/today_title">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/today_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/green"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/today_mention"
+                android:layout_below="@id/today_income">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@id/month"
+            android:background="@color/grey"
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="40px"/>
+
+
+        <RelativeLayout
+            android:id="@+id/month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/month_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/month_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7月"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/month_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/month_mention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近一笔"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_below="@id/month_title"
+                android:layout_toRightOf="@id/month_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/month_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/month_title">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/month_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/green"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/month_mention"
+                android:layout_below="@id/month_income">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@id/year"
+            android:background="@color/grey"
+            android:layout_marginTop="40px"
+            android:layout_marginBottom="40px"/>
+
+
+        <RelativeLayout
+            android:id="@+id/year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/year_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/year_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本年"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/year_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/year_mention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最近一笔"
+                android:textSize="15dp"
+                android:textColor="@color/grey"
+                android:layout_below="@id/year_title"
+                android:layout_toRightOf="@id/year_icon">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/year_income"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/red"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/year_title">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/year_outcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:textSize="15dp"
+                android:textColor="@color/green"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/year_mention"
+                android:layout_below="@id/year_income">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="60px">
+            <Button
+                android:id="@+id/make_br_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记一笔"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true">
+            </Button>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
